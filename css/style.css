@@ -1,0 +1,365 @@
+:root {
+    --maroon: #641E2B;
+    --maroon-dark: #3D2529;
+    --maroon-soft: #A65D68;
+    --cream: #F8F1E7;
+    --cream-deep: #F1E3D5;
+    --white: #FFFFFF;
+    --ink: #49383A;
+    --muted: #827276;
+    --line: #E8DCD2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1080px, 90%);
+    margin: auto;
+}
+
+header {
+    background: rgba(255, 255, 255, .96);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--maroon);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: .94rem;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--maroon);
+}
+
+.hero {
+    padding: 78px 0 68px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--cream-deep), var(--cream));
+}
+
+.avatar {
+    width: 142px;
+    height: 142px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid var(--white);
+    box-shadow: 0 8px 25px #3D25291A;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.eyebrow {
+    color: var(--maroon);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: var(--maroon-dark);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    margin: 10px 0;
+}
+
+.hero .lead {
+    max-width: 720px;
+    margin: 14px auto 0;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+.button {
+    display: inline-block;
+    margin: 22px 6px 0;
+    padding: 11px 22px;
+    border-radius: 30px;
+    background: var(--maroon);
+    color: var(--white);
+    font-weight: 700;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.button:hover {
+    background: var(--maroon-dark);
+    transform: translateY(-2px);
+}
+
+.button.outline {
+    color: var(--maroon);
+    background: transparent;
+    border: 1px solid var(--maroon);
+}
+
+.section {
+    padding: 58px 0;
+}
+
+.section.white {
+    background: var(--white);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    color: var(--maroon-dark);
+    font-size: 2rem;
+    margin: 5px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin: 0;
+}
+
+h2,
+h3 {
+    color: var(--maroon-dark);
+}
+
+h3 {
+    margin: 0 0 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 25px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    box-shadow: 0 7px 22px #3D252908;
+}
+
+.card p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+.icon {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background: var(--cream-deep);
+    color: var(--maroon);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 11px;
+    margin: 4px 3px 0 0;
+    border-radius: 20px;
+    background: var(--cream-deep);
+    color: var(--maroon);
+    font-size: .82rem;
+    font-weight: 600;
+}
+
+.timeline {
+    max-width: 780px;
+    margin: auto;
+    border-left: 2px solid #D8B9AD;
+    padding-left: 28px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 22px 24px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--maroon);
+    left: -36px;
+    top: 28px;
+}
+
+.timeline-item .date {
+    color: var(--maroon);
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.timeline-item p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+.contact-box {
+    max-width: 720px;
+    margin: auto;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    padding: 16px;
+    background: var(--cream);
+    border-radius: 10px;
+}
+
+.contact-item strong {
+    display: block;
+    color: var(--maroon);
+}
+
+form {
+    display: grid;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #FFFEFC;
+    color: var(--ink);
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #D8B9AD;
+    border-color: var(--maroon-soft);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+form .button {
+    border: 0;
+    cursor: pointer;
+    justify-self: start;
+}
+
+footer {
+    padding: 25px 0;
+    background: var(--maroon-dark);
+    color: var(--cream);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: .9rem;
+}
+
+@media (max-width: 760px) {
+    .nav {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 58px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 45px 0;
+    }
+
+    .timeline {
+        margin-left: 8px;
+    }
+}
